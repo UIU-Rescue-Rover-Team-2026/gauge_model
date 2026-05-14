@@ -1,0 +1,12 @@
+path: /home/mathinonthemoon/gauge_project/augmented_data  # path to data folder
+train: images
+val: images  # For now, we use the same for testing
+
+# Keypoints configuration
+kpt_shape: [3, 3]  # 3 keypoints, each with (x, y, visibility)
+names:
+  0: gauge
+
+# Flip index is for things like left/right eyes. 
+# Since a gauge is symmetrical, we don't need to flip.
+flip_idx: [0, 1, 2]
