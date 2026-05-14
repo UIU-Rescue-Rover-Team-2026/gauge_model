@@ -6,12 +6,12 @@ from ultralytics import YOLO
 # --- CONFIGURATION ---
 MODEL_PATH = '/home/mathinonthemoon/gauge_project/runs/pose/train/weights/best.pt'
 CAMERA_INDEX = 0  # Try 0, 1, or 2 if the camera fails to open
-MAX_PSI = 80     
-MAX_ANGLE = 272 
+MAX_PSI = 80     # Max PSI for the trained dataset, adjust if max different
+MAX_ANGLE = 272  # This is the angle difference that corresponds to 80 PSI on the trained dataset
 
 # Smoothing / Moving Average settings
 history = []
-history_size = 10 
+history_size = 10 #Smooth over the last 10 readings 
 
 def calculate_psi(points):
     """
