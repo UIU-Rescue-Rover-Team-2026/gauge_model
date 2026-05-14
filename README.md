@@ -72,7 +72,7 @@ For pose estimation replace `task=detect` with `task=pose` and use
 
 ```bash
 yolo task=detect mode=predict model=runs/train/weights/best.pt source=images/target.jpg
-python reading.py --pred runs/predict/labels/target.txt
+python3 reading.py --pred runs/predict/labels/target.txt
 ```
 
 `reading.py` contains helpers to parse predictions and convert detections
